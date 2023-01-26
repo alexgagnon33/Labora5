@@ -40,14 +40,14 @@ def Question1():
             print("Mauvaise réponse")
 
 def Question2():
-    for animal_random in Animal:
-        if animal_random == "1":
+    for animal_random in animaux_liste:
+        if animal_random.alimentation == "1":
             print("Animal    Alimentation")
             print(animal_random.nom + "  |  " + "Viande")
-        elif animal_random == "2":
+        elif animal_random.alimentation == "2":
             print("Animal    Alimentation")
             print(animal_random.nom + "  |  " + "Plante")
-        elif animal_random == "3":
+        elif animal_random.alimentation == "3":
             print("Animal    Alimentation")
             print(animal_random.nom + "  |  " + "Viande et Plante")
 
