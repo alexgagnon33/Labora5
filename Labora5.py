@@ -47,7 +47,7 @@ def Question2():
         elif animal_random == "2":
             print("Animal    Alimentation")
             print(animal_random.nom + "  |  " + "Plante")
-        else:
+        elif animal_random == "3":
             print("Animal    Alimentation")
             print(animal_random.nom + "  |  " + "Viande et Plante")
 
