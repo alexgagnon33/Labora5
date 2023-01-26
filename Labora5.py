@@ -36,7 +36,7 @@ def Question():
     while True:
         print("Choisez le bon type d'animaux dans la liste")
         print("Voir ce que mange tous les animaux dans la liste")
-        réponse_utilisateur = print(int("Choisisez une question: "))
+        réponse_utilisateur = input("Choisisez une question: ")
         if réponse_utilisateur == 1:
             Question1()
         elif réponse_utilisateur == 2:
