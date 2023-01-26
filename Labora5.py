@@ -19,16 +19,16 @@ class Omnivore(Animal):
     def alimentation(self):
         return "Viande et Plante"
 
-Dragon = ("Dragon", "Carnivore")
-Cheval = ("Dragon", "Carnivore")
-Panda = ("Dragon", "Carnivore")
-Wapiti = ("Dragon", "Carnivore")
-Gnous = ("Dragon", "Carnivore")
-Lynx = ("Dragon", "Carnivore")
-Ours = ("Dragon", "Carnivore")
-Bison = ("Dragon", "Carnivore")
-Loup = ("Dragon", "Carnivore")
-Cochon = ("Dragon", "Carnivore")
+Dragon = Carnivore("Dragon", "Carnivore")
+Cheval = Herbivore("Cheval", "Herbivore")
+Panda = Omnivore("Panda", "Omnivore")
+Wapiti = Omnivore("Wapiti", "Omnivore")
+Gnous = Herbivore("Gnous", "Herbivore")
+Lynx = Carnivore("Lynx", "Carnivore")
+Ours = Omnivore("Ours", "Omnivore")
+Bison = Herbivore("Bison", "Herbivore")
+Loup = Carnivore("Loup", "Carnivore")
+Cochon = Omnivore("Cochon", "Omnivore")
 
 animaux_liste = [Dragon, Cheval, Panda, Wapiti, Gnous, Lynx, Ours, Bison, Loup, Cochon]
 
@@ -38,12 +38,11 @@ def Question():
         print("Voir ce que mange tous les animaux dans la liste")
         réponse_utilisateur = print(int("Choisisez une question: "))
         if réponse_utilisateur == 1:
-            pass
+            Question1()
         elif réponse_utilisateur == 2:
-            pass
+            Question2()
         else:
             print("Votre réponse est mauvaise, choisisez une autre réponse")
-            False
 
 def Question1():
         animal_random = random.choice(animaux_liste)
@@ -55,6 +54,7 @@ def Question1():
 
 def Question2():
     for animal_random in animaux_liste:
-        print(animal_random.nom + animal_random.alimentation)
+        print("Animal    Alimentation")
+        print(animal_random.nom + animal_random.alimentation())
 
 Question()
