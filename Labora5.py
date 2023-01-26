@@ -37,9 +37,9 @@ def Question():
         print("Choisez le bon type d'animaux dans la liste")
         print("Voir ce que mange tous les animaux dans la liste")
         réponse_utilisateur = input("Choisisez une question: ")
-        if réponse_utilisateur == 1:
+        if réponse_utilisateur == "1":
             Question1()
-        elif réponse_utilisateur == 2:
+        elif réponse_utilisateur == "2":
             Question2()
         else:
             print("Votre réponse est mauvaise, choisisez une autre réponse")
