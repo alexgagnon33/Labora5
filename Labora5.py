@@ -3,24 +3,21 @@
 import random
 
 class Animal:
-    def __init__(self, nom, type):
+    def __init__(self, alimentation, nom, type):
+        self.alimentation = alimentation
         self.nom = nom
         self.type = type
 
-menu = {1 : "Viande",
-        2: "Plante",
-        3: "Viande et Plante"}
-
-Dragon = (1, "Dragon", "Carnivore")
-Cheval = (2, "Dragon", "Carnivore")
-Panda = (3, "Dragon", "Carnivore")
-Wapiti = (3, "Dragon", "Carnivore")
-Gnous = (2, "Dragon", "Carnivore")
-Lynx = (1, "Dragon", "Carnivore")
-Ours = (3, "Dragon", "Carnivore")
-Bison = (2, "Dragon", "Carnivore")
-Loup = (1, "Dragon", "Carnivore")
-Cochon = (3, "Dragon", "Carnivore")
+Dragon = ("Viande", "Dragon", "Carnivore")
+Cheval = ("Herbivore", "Dragon", "Carnivore")
+Panda = ("Omnivore", "Dragon", "Carnivore")
+Wapiti = ("Omnivore", "Dragon", "Carnivore")
+Gnous = ("Herbivore", "Dragon", "Carnivore")
+Lynx = ("Viande", "Dragon", "Carnivore")
+Ours = ("Omnivore", "Dragon", "Carnivore")
+Bison = ("Herbivore", "Dragon", "Carnivore")
+Loup = ("Viande", "Dragon", "Carnivore")
+Cochon = ("Omnivore", "Dragon", "Carnivore")
 
 animaux_liste = [Dragon, Cheval, Panda, Wapiti, Gnous, Lynx, Ours, Bison, Loup, Cochon]
 
@@ -39,12 +36,12 @@ def Question():
 
 def Question1():
         animal_random = random.choice(animaux_liste)
-        réponse_question1 = print(int("Quel type d'animaux est" + animal_random )) 
-        if réponse_question1 == animal_random:
+        réponse_question1 = print(int("Quel type d'animaux est" + animal_random.nom )) 
+        if réponse_question1 == animal_random.type:
             print("Bonne réponse")
         else:
             print("Mauvaise réponse")
 
 def Question2():
     for animal_random in animaux_liste:
-        print(animal_random + animal_random)
+        print(animal_random.nom + animal_random.alimentation)
