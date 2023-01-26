@@ -1,3 +1,8 @@
+#Je dois trouver une façon de random la liste d'une classe puis de poser la question et la réponse
+#Montrer tous les animaux avec leur nutrition
+
+
+
 class Animal:
     def __init__(self, nom, type):
         self.nom = nom
@@ -32,3 +37,5 @@ def Question():
         else:
             print("Votre réponse est mauvaise, choisisez une autre réponse")
             False
+
+def Question1():
