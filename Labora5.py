@@ -1,4 +1,4 @@
-#Montrer tous les animaux avec leur nutrition
+#Pour comprendre comment faire les subclass des alimentation avec l'exmeple des deers et "Python Subclass of a class" https://www.codesdope.com/course/python-multiple-inheritance/
 
 import random
 
@@ -7,6 +7,10 @@ class Animal:
         self.alimentation = alimentation
         self.nom = nom
         self.type = type
+
+class Carnivore(Animal):
+class Herbivore(Animal):
+class Omnivore(Animal):    
 
 Dragon = ("Viande", "Dragon", "Carnivore")
 Cheval = ("Herbivore", "Dragon", "Carnivore")
@@ -45,3 +49,5 @@ def Question1():
 def Question2():
     for animal_random in animaux_liste:
         print(animal_random.nom + animal_random.alimentation)
+
+Question()
