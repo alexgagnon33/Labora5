@@ -55,6 +55,6 @@ def Question1():
 def Question2():
     for animal_random in animaux_liste:
         print("Animal    Alimentation")
-        print(animal_random.nom + animal_random.alimentation())
+        print(animal_random.nom + "  |  " + animal_random.alimentation())
 
 Question()
