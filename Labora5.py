@@ -46,7 +46,7 @@ def Question():
 
 def Question1():
         animal_random = random.choice(animaux_liste)
-        réponse_question1 = input("Quel type d'animaux est le/la/l' " + animal_random.nom " ")
+        réponse_question1 = input("Quel type d'animaux est le/la/l' " + animal_random.nom)
         if réponse_question1 == animal_random.type:
             print("Bonne réponse")
         else:
