@@ -1,34 +1,21 @@
-#Pour comprendre comment faire les subclass des alimentation avec l'exmeple des deers et "Python Subclass of a class" https://www.codesdope.com/course/python-multiple-inheritance/
-
 import random
 
 class Animal:
-    def __init__(self, nom, type):
+    def __init__(self, alimentation, nom, type):
+        self.alimentation = alimentation
         self.nom = nom
         self.type = type
 
-class Carnivore(Animal):
-    def alimentation(self):
-        return "Viande"
-
-class Herbivore(Animal):
-    def alimentation(self):
-        return "Plante"
-
-class Omnivore(Animal):
-    def alimentation(self):
-        return "Viande et Plante"
-
-Dragon = Carnivore("Dragon", "Carnivore")
-Cheval = Herbivore("Cheval", "Herbivore")
-Panda = Omnivore("Panda", "Omnivore")
-Wapiti = Omnivore("Wapiti", "Omnivore")
-Gnous = Herbivore("Gnous", "Herbivore")
-Lynx = Carnivore("Lynx", "Carnivore")
-Ours = Omnivore("Ours", "Omnivore")
-Bison = Herbivore("Bison", "Herbivore")
-Loup = Carnivore("Loup", "Carnivore")
-Cochon = Omnivore("Cochon", "Omnivore")
+Dragon = Animal("1", "Dragon", "Carnivore")
+Cheval = Animal("2", "Cheval", "Herbivore")
+Panda = Animal("3", "Panda", "Omnivore")
+Wapiti = Animal("3", "Wapiti", "Omnivore")
+Gnous = Animal("2", "Gnous", "Herbivore")
+Lynx = Animal("1", "Lynx", "Carnivore")
+Ours = Animal("3", "Ours", "Omnivore")
+Bison = Animal("2", "Bison", "Herbivore")
+Loup = Animal("1", "Loup", "Carnivore")
+Cochon = Animal("3", "Cochon", "Omnivore")
 
 animaux_liste = [Dragon, Cheval, Panda, Wapiti, Gnous, Lynx, Ours, Bison, Loup, Cochon]
 
@@ -54,7 +41,14 @@ def Question1():
 
 def Question2():
     for animal_random in animaux_liste:
-        print("Animal    Alimentation")
-        print(animal_random.nom + "  |  " + animal_random.alimentation())
+        if animal_random == "1":
+            print("Animal    Alimentation")
+            print(animal_random.nom + "  |  " + "Viande")
+        elif animal_random == "2":
+            print("Animal    Alimentation")
+            print(animal_random.nom + "  |  " + "Plante")
+        else:
+            print("Animal    Alimentation")
+            print(animal_random.nom + "  |  " + "Viande et Plante")
 
 Question()
