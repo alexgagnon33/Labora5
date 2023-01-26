@@ -40,7 +40,7 @@ def Question1():
             print("Mauvaise réponse")
 
 def Question2():
-    for animal_random in animaux_liste:
+    for animal_random in Animal:
         if animal_random == "1":
             print("Animal    Alimentation")
             print(animal_random.nom + "  |  " + "Viande")
