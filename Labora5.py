@@ -3,25 +3,32 @@
 import random
 
 class Animal:
-    def __init__(self, alimentation, nom, type):
-        self.alimentation = alimentation
+    def __init__(self, nom, type):
         self.nom = nom
         self.type = type
 
 class Carnivore(Animal):
-class Herbivore(Animal):
-class Omnivore(Animal):    
+    def alimentation(self):
+        return "Viande"
 
-Dragon = ("Viande", "Dragon", "Carnivore")
-Cheval = ("Herbivore", "Dragon", "Carnivore")
-Panda = ("Omnivore", "Dragon", "Carnivore")
-Wapiti = ("Omnivore", "Dragon", "Carnivore")
-Gnous = ("Herbivore", "Dragon", "Carnivore")
-Lynx = ("Viande", "Dragon", "Carnivore")
-Ours = ("Omnivore", "Dragon", "Carnivore")
-Bison = ("Herbivore", "Dragon", "Carnivore")
-Loup = ("Viande", "Dragon", "Carnivore")
-Cochon = ("Omnivore", "Dragon", "Carnivore")
+class Herbivore(Animal):
+    def alimentation(self):
+        return "Plante"
+
+class Omnivore(Animal):
+    def alimentation(self):
+        return "Viande et Plante"
+
+Dragon = ("Dragon", "Carnivore")
+Cheval = ("Dragon", "Carnivore")
+Panda = ("Dragon", "Carnivore")
+Wapiti = ("Dragon", "Carnivore")
+Gnous = ("Dragon", "Carnivore")
+Lynx = ("Dragon", "Carnivore")
+Ours = ("Dragon", "Carnivore")
+Bison = ("Dragon", "Carnivore")
+Loup = ("Dragon", "Carnivore")
+Cochon = ("Dragon", "Carnivore")
 
 animaux_liste = [Dragon, Cheval, Panda, Wapiti, Gnous, Lynx, Ours, Bison, Loup, Cochon]
 
